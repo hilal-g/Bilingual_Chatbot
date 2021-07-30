@@ -2,6 +2,8 @@
 
 ### Train the model
 
+Run if model does not exist:
+
 ```
 python3 train.py
 ```
