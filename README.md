@@ -1,6 +1,6 @@
 # Monolingual Chatbot
 
-## Train the model
+### Train the model
 ```
 python3 train.py
 ```
