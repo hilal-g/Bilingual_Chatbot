@@ -1,7 +1,7 @@
 # Monolingual Chatbot
 
 ### Train the model
-If model does not exist:
+
 ```
 python3 train.py
 ```
