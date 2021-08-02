@@ -11,8 +11,7 @@
                        "Hello, there!",
                        "Hi!",
                        "G'day!",
-                       "Hi there, how may I help you?"],
-         "context_set": ""
+                       "Hi there, how may I help you?"]
         },
         {"tag": "goodbye",
          "patterns": ["cya", 
@@ -25,8 +24,7 @@
                        "Have a good one!",
                        "Talk to you later", 
                        "Goodbye!", 
-                       "Bye!"],
-         "context_set": ""
+                       "Bye!"]
         },
         {"tag": "age",
          "patterns": ["how old", 
@@ -38,21 +36,19 @@
                        "I cannot tell you how old I am.",
                        "I cannot disclose information such as my age.",
                        "My age is irrelevant to this conversation.",
-                       "How old do you think I am?"],
-         "context_set": ""
+                       "How old do you think I am?"]
         },
         {"tag": "user_name",
-                "patterns": ["my name is", 
-                             "i am called", 
-                             "you can call me"],
-                "responses": ["That's a pretty name!", 
-                              "That's an interesting name! What does it mean?", 
-                              "Nice to meet you!", 
-                              "Cool name!", 
-                              "What a pretty name!", 
-                              "Pleased to meet you!"],
-                "context_set": ""
-               },
+        "patterns": ["my name is",  
+                     "i am called", 
+                     "you can call me"],
+        "responses": ["That's a pretty name!", 
+                      "That's an interesting name! What does it mean?", 
+                      "Nice to meet you!", 
+                      "Cool name!", 
+                      "What a pretty name!", 
+                      "Pleased to meet you!"]
+        },
         {"tag": "chatbot_name",
          "patterns": ["what is your name", 
                       "what should I call you", 
@@ -62,8 +58,7 @@
                        "I am a monolingual chatbot, and that is all you need to know.", 
                        "My name does not exist.", 
                        "What's your name?", 
-                       "The real question is: what's your name?"],
-         "context_set": ""
+                       "The real question is: what's your name?"]
         },
         {"tag": "current_occupation",
                 "patterns": ["what's up",
@@ -73,8 +68,7 @@
                              "what are you doing right now?"],
                 "responses": ["Other than talking to you, nothing.", 
                               "I am talking to you right now.", 
-                              "Not much. What are you doing?"],
-                "context_set": ""
+                              "Not much. What are you doing?"]
         },
         {"tag": "chatbot_occupation",
                 "patterns": ["what are you",
@@ -84,8 +78,7 @@
                              "who are you"],
                 "responses": ["I am a monolingual chatbot.", 
                               "I am a chatbot.",
-                              "I am a chatbot, and I talk to online users."],
-                "context_set": ""
+                              "I am a chatbot, and I talk to online users."]
         },
         {"tag": "books",
          "patterns": ["i like reading", 
@@ -101,8 +94,7 @@
                        "I also like to read books. To Kill a Mockingbird is one of my favoites.", 
                        "I enjoy reading as well. Pride and Prejudice is one of my favorite books.", 
                        "I love reading books! Twilight is one of my favorite series.", 
-                       "The Hunger Games, Harry Potter, To Kill a Mockingbird, Pride and Prejudice, and Twilight are the greatest books."],
-         "context_set": ""
+                       "The Hunger Games, Harry Potter, To Kill a Mockingbird, Pride and Prejudice, and Twilight are the greatest books."]
         },
         {"tag": "tv",
                 "patterns": ["i like tv",
@@ -117,8 +109,7 @@
                               "My second favorite tv show is Never Have I Never.", 
                               "My third favorite tv show is Rick and Morty.", 
                               "My fourth favorite tv show is American Horror Story.", 
-                              "My fifth favorite tv show is Ted Lasso."],
-                "context_set": ""
+                              "My fifth favorite tv show is Ted Lasso."]
         },
         {"tag": "social_media",
         "patterns": ["what's your favorite social media", 
@@ -130,24 +121,21 @@
                       "TikTok is the best platform for sharing and viewing short videos.", 
                       "Instagram is famous for sharing photos and short videos.", 
                       "Reddit is a discussion forum known as 'the front page of the internet'.", 
-                      "Twitter is a platform for sharing short messages."],
-        "context_set": ""
+                      "Twitter is a platform for sharing short messages."]
         },
         {"tag": "time",
         "patterns": ["what time is it", 
                      "whats the time", 
                      "do you have the time", 
                      "time please"],
-        "responses": [],
-        "context_set": ""
+        "responses": []
         },
         {"tag": "date",
         "patterns": ["whats the date", 
                      "what is the date", 
                      "what is today's date", 
                      "what day is it"],
-        "responses": [],
-        "context_set": ""
+        "responses": []
         },
         {"tag": "hours",
          "patterns": ["when are you available to talk", 
@@ -157,8 +145,7 @@
                       "hours of operation"],
          "responses": ["I am here all day!", 
                        "I am available to talk 24/7.", 
-                       "You can talk to me anytime."],
-         "context_set": ""
+                       "You can talk to me anytime."]
         }
    ]
 }
