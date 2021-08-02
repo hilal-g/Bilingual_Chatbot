@@ -78,6 +78,7 @@ def chat():
                     elif topic["tag"] == tag:
                         responses = topic["responses"]
 
-                        print(random.choice(responses))
+                        response = random.choice(responses)
+                        print(response)
 
 chat()
