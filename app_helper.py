@@ -4,6 +4,7 @@ import nltk
 import numpy as np 
 import random 
 
+from pycountry import languages
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
 
@@ -36,7 +37,8 @@ def chat(my_input):
 
     if detect_lang != "__label__en":
         
-        response = "I only speak English. No other languages!"
+        lang_name = languages.get(alpha_2=detect_lang[-2:]).name
+        response = "Sorry, I don't speak " + lang_name + ". I only speak English."
         return response
     
     else:
