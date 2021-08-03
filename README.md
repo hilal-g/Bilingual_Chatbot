@@ -1,4 +1,4 @@
-# Monolingual Chatbot
+# Bilingual Chatbot
 
 ## Implementation
 
