@@ -34,10 +34,10 @@ def chat(my_input):
     fasttext.FastText.eprint = lambda x: None 
     lang_model = fasttext.load_model('lid.176.ftz')
     detect_lang = lang_model.predict(my_input, k=1)[0][0]
+    lang_name = languages.get(alpha_2=detect_lang[-2:]).name
 
     if detect_lang != "__label__en":
         
-        lang_name = languages.get(alpha_2=detect_lang[-2:]).name
         response = "Sorry, I don't speak " + lang_name + ". I only speak English."
         return response, lang_name
     

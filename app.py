@@ -17,15 +17,17 @@ def send():
 
         sql = "INSERT INTO user_queries (query, detected_language) VALUES (%s, %s)"
 
-        pgcursor.execute(sql, (my_input, lang_name))
+        lang_name = chat(message)[1]
+
+        pgcursor.execute(sql, (message, lang_name))
         pgdb.commit()
 
-    elif message != "":
+    if message != "":
 
         ChatLog.config(state = NORMAL)
         ChatLog.insert(END, "You: " + message + "\n\n")
 
-        result = chat(message)
+        result = chat(message)[0]
         ChatLog.insert(END, "MC: " + result + "\n\n")
 
         ChatLog.config(state = DISABLED)
