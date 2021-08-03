@@ -1,12 +1,26 @@
+import psycopg
 from tkinter import * 
 
 from app_helper import chat
+from parse_args import args
 
 def send():
     message = EntryBox.get("1.0", "end-1c").strip()
     EntryBox.delete("0.0", END)
 
-    if message != "":
+    if message != "" and args.use_database == True:
+        DB_NAME = "bilingual_chatbot"
+        DB_HOST = "localhost"
+
+        pgdb = psycopg.connect(dbname = DB_NAME, host = DB_HOST)
+        pgcursor = pgdb.cursor()
+
+        sql = "INSERT INTO user_queries (query, detected_language) VALUES (%s, %s)"
+
+        pgcursor.execute(sql, (my_input, lang_name))
+        pgdb.commit()
+
+    elif message != "":
 
         ChatLog.config(state = NORMAL)
         ChatLog.insert(END, "You: " + message + "\n\n")

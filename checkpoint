@@ -1,0 +1,2 @@
+model_checkpoint_path: "/Users/Hilal/Desktop/datasci-workspace/Monolingual_Chatbot/model.tflearn"
+all_model_checkpoint_paths: "/Users/Hilal/Desktop/datasci-workspace/Monolingual_Chatbot/model.tflearn"

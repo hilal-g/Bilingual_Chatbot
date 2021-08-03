@@ -39,7 +39,7 @@ def chat(my_input):
         
         lang_name = languages.get(alpha_2=detect_lang[-2:]).name
         response = "Sorry, I don't speak " + lang_name + ". I only speak English."
-        return response
+        return response, lang_name
     
     else:
 
@@ -55,7 +55,7 @@ def chat(my_input):
                             + " " \
                             + datetime.datetime.now().strftime("%p") \
 
-                return response
+                return response, lang_name
 
             elif topic["tag"] == tag and tag == "date":
                 response = "Today is " \
@@ -67,9 +67,9 @@ def chat(my_input):
                             + ", " \
                             + datetime.datetime.now().strftime("%Y")
 
-                return response
+                return response, lang_name
 
             elif topic["tag"] == tag:
                 responses = topic["responses"]
                 response = random.choice(responses)
-                return response
+                return response, lang_name

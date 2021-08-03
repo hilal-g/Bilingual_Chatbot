@@ -2,14 +2,16 @@ import datetime
 import fasttext
 import nltk
 import numpy as np 
+import psycopg
 import random 
 
 from pycountry import languages
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
 
-from preprocess import words, labels, data
-from neural_network import model 
+from neural_network import model
+from parse_args import args
+from preprocess import words, labels, data 
 
 def bag_of_words(s, words):
 
@@ -42,10 +44,24 @@ def chat():
             fasttext.FastText.eprint = lambda x: None 
             lang_model = fasttext.load_model('lid.176.ftz')
             detect_lang = lang_model.predict(my_input, k=1)[0][0]
+            lang_name = languages.get(alpha_2=detect_lang[-2:]).name
+
+            if args.use_database == True:
+
+                DB_NAME = "bilingual_chatbot"
+                DB_HOST = "localhost"
+
+                pgdb = psycopg.connect(dbname = DB_NAME, host = DB_HOST)
+                pgcursor = pgdb.cursor()
+
+                sql = "INSERT INTO user_queries (query, detected_language) VALUES (%s, %s)"
+
+                pgcursor.execute(sql, (my_input, lang_name))
+                pgdb.commit()
+
 
             if detect_lang != "__label__en":
                 
-                    lang_name = languages.get(alpha_2=detect_lang[-2:]).name
                     response = "Sorry, I don't speak " + lang_name + ". I only speak English."
                     print(response)
             

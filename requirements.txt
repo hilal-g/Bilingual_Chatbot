@@ -5,3 +5,4 @@ numpy==1.19.5
 tflearn==0.5.0
 tensorflow==2.5.0
 pycountry==20.7.3
+psycopg==3.0.dev2
