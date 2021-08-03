@@ -60,9 +60,9 @@ def chat():
                 pgdb.commit()
 
 
-            if detect_lang != "__label__en":
+            if detect_lang != "__label__en" and detect_lang != "__label__es":
                 
-                    response = "Sorry, I don't speak " + lang_name + ". I only speak English."
+                    response = "Sorry, I don't speak " + lang_name + ". I only speak English and Spanish."
                     print(response)
             
             else:

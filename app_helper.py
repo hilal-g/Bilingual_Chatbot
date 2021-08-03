@@ -36,9 +36,9 @@ def chat(my_input):
     detect_lang = lang_model.predict(my_input, k=1)[0][0]
     lang_name = languages.get(alpha_2=detect_lang[-2:]).name
 
-    if detect_lang != "__label__en":
+    if detect_lang != "__label__en" and detect_lang != "__label__es":
         
-        response = "Sorry, I don't speak " + lang_name + ". I only speak English."
+        response = "Sorry, I don't speak " + lang_name + ". I only speak English and Spanish."
         return response, lang_name
     
     else:
